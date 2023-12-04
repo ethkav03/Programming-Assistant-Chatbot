@@ -74,13 +74,14 @@ I had never used the GPT API for an application like this before. A challenge I 
 find the right way of structuring the prompts so that I would get the desired result, but it
 would also be dynamic in a sense so that it would apply to many different functions. It was a
 relatively easy solution. I was able to construct the prompt in a similar to the following format:\
-'<function> Language: <language> Code: <code>'\
+![Sample Code Format](images/codeformat.png)
+<function> Language: <language> Code: <code>\
 Another problem encounter was parsing text vs code from the returned prompt. The
 sequence ``` was the identifier for when the result transitioned from text to code. Initially I
 was able to parse out one occurrence of code in the response. However, if it included more
 than one code snippet they would be treated as plaintext. To fix this I modified some code
 (see Figure 6.1) that I found on a forum for GPT-3.5 API.
-
+![Code Snippet](images/snippet.png)
 Fig 6.1 - Code Snippet [1]
 ## 7. Interesting Discoveries
 At a certain point in development, once a level of functionality had been achieved, I was able
